@@ -26,9 +26,7 @@ from . import (
     logging,
     name,
     nick,
-    patreon,
     ping,
-    power_overwhelming,
     prefix,
     private,
     public,
@@ -37,7 +35,6 @@ from . import (
     restrict,
     restrictions,
     servercheck,
-    source,
     showtextchannelsto,
     template,
     textchannelname,
@@ -73,10 +70,7 @@ commands = {
     "logging": logging.command,
     "name": name.command,
     "nick": nick.command,
-    "patreon": patreon.command,
     "ping": ping.command,
-    "power-overwhelming": power_overwhelming.command,
-    "poweroverwhelming": power_overwhelming.command,
     "prefix": prefix.command,
     "private": private.command,
     "public": public.command,
@@ -85,7 +79,6 @@ commands = {
     "restrict": restrict.command,
     "restrictions": restrictions.command,
     "servercheck": servercheck.command,
-    "source": source.command,
     "showtextchannelsto": showtextchannelsto.command,
     "template": template.command,
     "textchannelname": textchannelname.command,
@@ -125,13 +118,11 @@ async def run(c, ctx, params):
             return False, "You don't have permission to use that command."
 
     if cmd.sapphire_required and not ctx['sapphire']:
-        return False, ("That command is restricted to :gem: **Sapphire Patron** servers.\n"
-                       "Become a Sapphire Patron to support the development of this bot and unlock more ~~useless~~ "
-                       "amazing features: https://www.patreon.com/pixaal")
+        return False, ("Stop right there!\n"
+                       "ask ap0 for that :D")
     elif cmd.gold_required and not ctx['gold']:
-        return False, ("That command is restricted to :credit_card: **Gold Patron** servers.\n"
-                       "Become a Gold Patron to support the development of this bot and unlock more ~~useless~~ "
-                       "amazing features: https://www.patreon.com/pixaal")
+        return False, ("Stop right there!\n"
+                       "ask ap0 for that :D")
 
     if cmd.voice_required:
         v = ctx['message'].author.voice
@@ -177,8 +168,8 @@ async def run(c, ctx, params):
         log(error_text)
         return False, ("A `{}` error occured :(\n"
                        "Please ensure I have the correct permissions, check `{}help {}` for the correct command usage, "
-                       "and then try again. \nIf that still doesn't help, try asking in the support server: "
-                       "https://discord.gg/qhMrz6u".format(type(e).__name__, ctx['print_prefix'], c))
+                       "and then try again. \nIf that still doesn't help, try asking: "
+                       "ap0".format(type(e).__name__, ctx['print_prefix'], c))
 
     if r is None:
         # In case command didn't return success/response
@@ -189,8 +180,8 @@ async def run(c, ctx, params):
                         important=True)
         return False, ("An unknown error occured :(\n"
                        "Please ensure I have the correct permissions, check `{}help {}` for the correct command usage, "
-                       "and then try again. \nIf that still doesn't help, try asking in the support server: "
-                       "https://discord.gg/qhMrz6u".format(ctx['print_prefix'], c))
+                       "and then try again. \nIf that still doesn't help, try asking:"
+                       "ap0".format(ctx['print_prefix'], c))
 
     return r
 

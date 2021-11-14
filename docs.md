@@ -1,27 +1,34 @@
-I'm a bot that allows your users to dynamically and infinitely create voice channels as they need them, and automatically delete them as soon as they are no longer used.
+I'm a the bot that allows users to dynamically and infinitely create voice channels as they need them, and automatically delete them as soon as they are no longer used.
 
-More detailed info is available on the wiki: https://wiki.dotsbots.com
-
-** **
-**-- Quickstart --**
-
-Run `vc/create` and I'll make a new primary channel for you. When users join this channel, I'll make a new channel for them and move them to it.
-
-The new channel will by default be named according to the game they are playing together, e.g. *"#1 [Warframe]"*, and will rename itself if they start to play a different game - but you can change this to anything you like (see the command reference below).
-
-Once everybody leaves the channel, I'll automatically delete it.
+Ask staff members for more informations about the use of the bot. For any tehnical problems reach out to @ap0 ショーメーカー#4326.
 
 ** **
 **-- Commands --**
 
-Here are the most commonly used commands. For the full list of commands available and more detail on how to use them check the wiki: https://wiki.dotsbots.com/en/commands
+Here are the most commonly used commands. 
 
-`vc/create` - Make a new primary voice channel. When users join this channel, I'll make a new one for them and move them into it.
+`vc/name` - Rename your voice channel.
 
-`vc/template` - Change the name template for secondary channels. Default is `## [@@game_name@@]`. Run `vc/help template` for a full list of usable variables.
+`vc/nick` - Change how your name is shown in the channel name.
+
+`vc/kick` - Initiate a votekick to remove someone from your channel.
 
 `vc/private` - Make your voice channel private, preventing anyone from joining you directly.
 
+`vc/public` - Make your channel public again after being private.
+
 `vc/lock` or `vc/limit` - Lock or set the user limit of your channel to prevent any more people from being able to join.
 
-`vc/ping` - A quick test command to check the bot is working, and show its response time. Frequently high response times (>2s) may indicate performance issues.
+`vc/unlock` or `vc/unlimit` - Unlock or remove the user limit of your channel.
+
+`vc/bitrate` - Set a server-wide custom bitrate for yourself.
+
+`vc/ping` - Test the response time of the bot.
+
+`vc/transfer` - Give ownership of your channel to someone else.
+
+Here are the admin commands.
+
+`vc/channelinfo` - A debugging command to show game/bitrate info about users in your channel.
+
+`vc/rename` - Like vc/name, but you can rename someone else's channel.
