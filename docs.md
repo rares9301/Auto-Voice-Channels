@@ -1,8 +1,3 @@
-I'm a the bot that allows users to dynamically and infinitely create voice channels as they need them, and automatically delete them as soon as they are no longer used.
-
-Ask staff members for more informations about the use of the bot. For any tehnical problems reach out to @ap0 ショーメーカー#4326.
-
-** **
 **-- Commands --**
 
 Here are the most commonly used commands. 
@@ -32,3 +27,5 @@ Here are the admin commands.
 `vc/channelinfo` - A debugging command to show game/bitrate info about users in your channel.
 
 `vc/rename` - Like vc/name, but you can rename someone else's channel.
+
+If you need further assistance, don't hesitate to reach out to ap0 :D
