@@ -1,3 +1,4 @@
+** **
 **-- Commands --**
 
 Here are the most commonly used commands. 
@@ -22,7 +23,8 @@ Here are the most commonly used commands.
 
 `vc/transfer` - Give ownership of your channel to someone else.
 
-Here are the admin commands.
+** **
+Here are the **admin** commands.
 
 `vc/channelinfo` - A debugging command to show game/bitrate info about users in your channel.
 
